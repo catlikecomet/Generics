@@ -3,12 +3,10 @@ package com.company;
 import java.util.List;
 
 
-public class Main extends Counter{
+public class Main <T extends Countable> extends Box {
 
     public static void main(String[] args) {
-        Counter counter = new Counter();
-        System.out.println(counter.toString());
+        Box box = new Box();
+
     }
-
-
 }

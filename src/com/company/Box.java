@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Box<T extends Countable> implements Countable {
 
@@ -22,4 +21,5 @@ public class Box<T extends Countable> implements Countable {
 
         return getCount;
     }
+
 }

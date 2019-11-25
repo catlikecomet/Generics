@@ -21,5 +21,4 @@ public class Box<T extends Countable> implements Countable {
 
         return getCount;
     }
-
 }

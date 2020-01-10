@@ -1,12 +1,12 @@
 package com.company;
 
-import java.util.List;
-
+import java.util.function.Predicate;
 
 public class Main <T extends Countable> extends Box {
 
     public static void main(String[] args) {
 
+        Counter counter = new Counter();
         Apple apple = new Apple();
 
         Box box = new Box();
@@ -20,9 +20,11 @@ public class Main <T extends Countable> extends Box {
         cart1.add(box);
         cart1.add(box);
 
-        System.out.println("apples counter: " + apple.getCount());
-        System.out.println("box contains: " + box.getCount() + " apples ");
-        System.out.println("cart contains: " + cart.getCount() + " boxes and " + cart.getCount() * box.getCount() + " Apple(s).");
-        System.out.println("cart 2 contains: " + cart1.getCount() + " boxes and " + cart.getCount() * box.getCount() + " Apple(s).");
+        System.out.println(counter.getCount(box.getApples(), new Predicate<Apple>() {
+            @Override
+            public boolean test(Apple apple) {
+                return apple.getColour().equals("Red");
+            }
+        }));
         }
         }

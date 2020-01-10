@@ -24,6 +24,6 @@ public class Counter<T extends Predicate> implements Predicate<T> {
     //predicate to determine whether an object should be counted or not
     @Override
     public boolean test(T t) {
-        return T -> ;
+        return t.equals("Red");
     }
 }
